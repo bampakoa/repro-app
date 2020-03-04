@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <!--The content below is only a placeholder and can be replaced.-->
     <div style="text-align:center" class="content">
-      <h1>
+      <h1 [ngClass]="currentClasses">
         Welcome to {{title}}!
       </h1>
       <span style="display: block">{{ title }} app is running!</span>
@@ -29,4 +29,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'repro-app';
+  currentClasses = {
+    'classA classB': true
+  };
 }
